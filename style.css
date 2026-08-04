@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px dotted red; */
+    font-family: 'Black Ops One', cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #050508;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+#stars-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+.app{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+}
+.header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.underheader{
+  text-align: center;
+}
+.underheader > h3{
+  font-weight: normal;
+}
+/*Список карточек*/
+.sound-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.sound-card{
+    background-color: #121218; /* Темно-серый оттенок чуть светлее фона */
+    border: 1px solid #22222e; /* Легкая рамка */
+    border-radius: 12px;       /* Закругление углов */
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Расстояние между верхней строкой и ползунком */
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sound-title{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.volume-slider{
+    width: 100%;
+    accent-color: #818cf8; /* Цвет ползунка */
+    cursor: pointer;
+}
+/*Иконки*/
+.sound-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+  color: #818cf8; /* Акцентный цвет */
+}
+/*Кнопка play*/
+.play-btn {
+  background-color: #22222e;
+  color: #ffffff;
+  border: 1px solid #333344;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%; /* Делаем идеальный круг */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.play-btn:hover {
+  background-color: #818cf8;
+  border-color: #818cf8;
+}
+.play-btn svg {
+  width: 16px;
+  height: 16px;
+}
+/* Подсветка карточки, когда звук воспроизводится */
+.sound-card.playing {
+  border-color: rgba(167, 139, 250, 0.5);
+  box-shadow: 0 0 15px 2px rgba(167, 139, 250, 0.3);
+  transition: all 0.3s ease;
+}

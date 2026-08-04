@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoFiFlow</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Фоновый холст для звезд -->
+    <canvas id="stars-canvas"></canvas>
+    <!-- Главный контейнер -->
+    <main class="app">
+        <header class="header">
+            <h1>LoFiFlow</h1>
+        </header>
+        <div class="underheader"><h3>Additional Sounds</h3></div><br>
+        <!-- Список звуков -->
+        <div class="sound-list">
+            <!-- Дождь -->
+            <div class="sound-card" data-sound="rain">
+                <!-- Заголовок -->
+                <div class="card-header">
+                    <div class="sound-info">
+                        <i data-lucide = "cloud-rain" class="icon"></i>
+                        <span class="sound-title">Rain</span>
+                    </div>
+                    <button class="play-btn"><i data-lucide="play"></i></button>
+                </div>
+                <!-- Нижняя часть: Ползунок громкости -->
+                 <div class="card-body">
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                 </div>
+                 <!-- Скрытый аудио-тег -->
+                    <audio src="assets/audio/rain.mp3" loop></audio>
+            </div>
+            <!-- Костёр -->
+            <div class="sound-card" data-sound="fire">
+                <!-- Заголовок -->
+                <div class="card-header">
+                    <div class="sound-info">
+                    <i data-lucide="flame" class="icon"></i>
+                    <span class="sound-title">Flame</span>
+                </div>
+                    <button class="play-btn"><i data-lucide="play"></i></button>
+                </div>
+                <!-- Нижняя часть: Ползунок громкости -->
+                 <div class="card-body">
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                 </div>
+                 <!-- Скрытый аудио-тег -->
+                    <audio src="assets/audio/flame.mp3" loop></audio>
+            </div>
+            <!-- Лес -->
+            <div class="sound-card" data-sound="forest">
+                <!-- Заголовок -->
+                <div class="card-header">
+                    <div class="sound-info">
+                    <i data-lucide="trees" class="icon"></i>
+                    <span class="sound-title">Forest</span>
+                </div>
+                    <button class="play-btn"><i data-lucide="play"></i></button>
+                </div>
+                <!-- Нижняя часть: Ползунок громкости -->
+                 <div class="card-body">
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                 </div>
+                 <!-- Скрытый аудио-тег -->
+                    <audio src="assets/audio/forest.mp3" loop></audio>
+            </div>
+            <div class="sound-card" data-sound="sea">
+                <!-- Заголовок -->
+                <div class="card-header">
+                    <div class="sound-info">
+                    <i data-lucide="waves" class="icon"></i>
+                    <span class="sound-title">Sea</span>
+                </div>
+                    <button class="play-btn"><i data-lucide="play"></i></button>
+                </div>
+                <!-- Нижняя часть: Ползунок громкости -->
+                 <div class="card-body">
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                 </div>
+                 <!-- Скрытый аудио-тег -->
+                    <audio src="assets/audio/sea.mp3" loop></audio>
+            </div>
+            <div class="sound-card" data-sound="keyboard">
+                <!-- Заголовок -->
+                <div class="card-header">
+                    <div class="sound-info">
+                    <i data-lucide="keyboard" class="icon"></i>
+                    <span class="sound-title">Keyboard</span>
+                </div>
+                    <button class="play-btn"><i data-lucide="play"></i></button>
+                </div>
+                <!-- Нижняя часть: Ползунок громкости -->
+                 <div class="card-body">
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                 </div>
+                 <!-- Скрытый аудио-тег -->
+                    <audio src="assets/audio/keyboard.mp3" loop></audio>
+            </div>
+
+            <div class="underheader"><h3>Lo-Fi Generator</h3></div>
+            <div class="sound-card" data-sound="lofi">
+                <!-- Заголовок -->
+                <div class="card-header">
+                    <div class="sound-info">
+                    <i data-lucide="music" class="icon"></i>
+                    <span class="sound-title">Standard Music</span>
+                </div>
+                    <button class="play-btn"><i data-lucide="play"></i></button>
+                </div>
+                <!-- Нижняя часть: Ползунок громкости -->
+                 <div class="card-body">
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                 </div>
+                 <!-- Скрытый аудио-тег -->
+                    <audio src="assets/audio/keyboard.mp3" loop></audio>
+            </div>
+        </div>
+    </main>
+<script src="script.js"></script>
+<script>
+    lucide.createIcons();
+</script>
+</body>
+</html>
